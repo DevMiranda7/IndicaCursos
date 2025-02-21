@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <title>Register</title>
+</head>
+<body>
+<main class="mainRegister">
+    <div class="EmailESenha">
+        <div class="campos">
+            <div class="titulo"><h1>Registro</h1></div>
+            <form name = "CadastroAluno" action="register" class="RegisterForm">
+                <table>
+                    <tr>
+                        <td><input type="text" name="Nome" id="nome" placeholder="Nome"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" name="Email" id="email" placeholder="Email"></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="text" name="Senha" id="senha" placeholder="Senha"></td>
+                    </tr>
+                </table>
+                <input type="button" value="Registrar" id="botaoRegister" onclick="criar()">
+
+
+                <table class="tabela3">
+                    <tr><th>Já possui uma conta?</th></tr>
+                    <tr><td><a href="">Login</a></td></tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</main>
+
+<script src="resources/js/registrar.js"></script>
+</body>
+</html>
