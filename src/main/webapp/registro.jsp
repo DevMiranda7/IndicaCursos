@@ -1,36 +1,36 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
-    <title>Register</title>
+    <title>Registro</title>
 </head>
 <body>
 <main class="mainRegister">
     <div class="EmailESenha">
         <div class="campos">
             <div class="titulo"><h1>Registro</h1></div>
-            <form name = "CadastroAluno" action="register" class="RegisterForm">
+            <form name = "CadastroAluno" action="register" method="POST" class="RegisterForm" onsubmit="return criar()">
                 <table>
                     <tr>
-                        <td><input type="text" name="Nome" id="nome" placeholder="Nome"></td>
+                        <td><input type="text" name="Nome" id="nome" placeholder="Nome" required></td>
                     </tr>
 
                     <tr>
-                        <td><input type="text" name="Email" id="email" placeholder="Email"></td>
+                        <td><input type="email" name="Email" id="email" placeholder="Email" required></td>
                     </tr>
 
                     <tr>
-                        <td><input type="text" name="Senha" id="senha" placeholder="Senha"></td>
+                        <td><input type="password" name="Senha" id="senha" placeholder="Senha" required></td>
                     </tr>
                 </table>
-                <input type="button" value="Registrar" id="botaoRegister" onclick="criar()">
+                <input type="submit" value="Registrar" id="botaoRegister">
 
 
                 <table class="tabela3">
                     <tr><th>Já possui uma conta?</th></tr>
-                    <tr><td><a href="">Login</a></td></tr>
+                    <tr><td><a href="login.jsp">Login</a></td></tr>
                 </table>
             </form>
         </div>

@@ -4,14 +4,14 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 
-// Conexao e querys
+// Atributos de conexão
 public class Dao {
     private String user = "root";
     private String url = "jdbc:mysql://localhost:3306/indicaCursos?useTimezone=true&serverTimezone=UTC";
     private String password = "1234";
     private String Driver = "com.mysql.cj.jdbc.Driver";
 
-
+    //Método de Conexão
     private Connection conexao(){
         Connection conn = null;
 
@@ -29,10 +29,16 @@ public class Dao {
         return conn;
     }
 
+    // Registro
+    //Método para criar um novo aluno
     public void create(Aluno aluno){
 
         String insert = "insert into aluno (nome, email, senha) values (?,?,?)";
+        //Novo objeto de senha para criptografar
+        SenhaUtil senhaUtil = new SenhaUtil();
 
+        //Criptografando
+        String senhaCriptografada = senhaUtil.senhaCriptografar(aluno.getSenha());
         try {
             Connection conn = conexao();
 
@@ -40,16 +46,48 @@ public class Dao {
 
             querySql.setString(1,aluno.getNome());
             querySql.setString(2,aluno.getEmail());
-            querySql.setString(3,aluno.getSenha());
+            querySql.setString(3,senhaCriptografada);
 
             querySql.executeUpdate();
 
             conn.close();
         }catch (SQLException ex){
             System.out.println("Erro ao executar o insert: "+ex.getMessage());
+
         }
 
     }
+
+    //Login
+
+    public String login(String email, String senha){
+        String selectSQL = "select nome, senha from aluno where email = ?";
+
+        try {
+            Connection conn = conexao();
+
+            PreparedStatement queryLoginSql = conn.prepareStatement(selectSQL);
+            queryLoginSql.setString(1,email);
+            ResultSet rs = queryLoginSql.executeQuery();
+
+            if(rs.next()){
+                String senhaBD = rs.getString("senha");
+                String nomeBD = rs.getString("nome");
+                SenhaUtil senhaUtil = new SenhaUtil();
+
+                if(senhaUtil.verificarSenha(senha,senhaBD)){
+                    return nomeBD;
+                }
+            }
+        }catch (SQLException ex){
+            System.out.println("Erro ao verificar as credenciais de login: "+ex.getMessage());
+        }
+
+        return null;
+    }
+
+
+
 
     public ArrayList<Aluno> select(){
         ArrayList<Aluno> alunos = new ArrayList<>();

@@ -18,7 +18,7 @@ function criar(){
     }
     else{
         window.alert("Registro concluído!");
-        document.forms["CadastroAluno"].submit();
+        return true;
     }
 
 }

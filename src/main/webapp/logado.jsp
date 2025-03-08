@@ -17,8 +17,9 @@
             </div>
 
             <div class="login-register">
-                <a href="login">Login</a>
-                <a href="register">Register</a>
+                <a href="<%= request.getContextPath() %>/logout">Logout</a>
+                <p><%= session.getAttribute("nomeDoUsuario")%></p>
+
             </div>
         </nav>
 
@@ -32,26 +33,26 @@
                 <div class="containnerCursos">
                    <div>
                         <p>Matemática</p>
-                       <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                        <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                    </div>
                    <div>
                     <p>Matemática</p>
-                       <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                    <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                     </div>
                     <div>
                         <p>Matemática</p>
-                        <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                        <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                    </div>
                    <div>
                     <p>Matemática</p>
-                       <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                    <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                     </div><div>
                         <p>Matemática</p>
-                    <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                        <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                    </div>
                    <div>
                     <p>Matemática</p>
-                       <a href=""><img src="resources/imgs/matematica (1).png" alt="Matemática"></a>
+                    <a href=""><img src="/matematica (1).png" alt="Matemática"></a>
                     </div>
                 </div>
         </section>
