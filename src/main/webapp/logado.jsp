@@ -17,7 +17,7 @@
             </div>
 
             <div class="login-register">
-                <a href="<%= request.getContextPath() %>/logout">Logout</a>
+                <a href="logout">Logout</a>
                 <p><%= session.getAttribute("nomeDoUsuario")%></p>
 
             </div>
@@ -25,7 +25,7 @@
 
         <div class="campoDePesquisa">
             <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar">
-            <button onclick="pendente" id="lupaDePesquisa" ><img src="" alt="lupa"></button>
+            <button onclick="pendente" id="lupaDePesquisa" ><img src="lupa.png" alt="lupa"></button>
         </div>
         <div id="subTitulo"><p>Top 6 cursos mais avaliados</p></div>
 

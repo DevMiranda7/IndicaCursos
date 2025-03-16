@@ -16,7 +16,7 @@ public class MainPageServlet extends HttpServlet {
         if(session == null || session.getAttribute("usuario")== null){
             response.sendRedirect("login.jsp");
         }else {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("logado.jsp");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
             dispatcher.forward(request,response);
         }
     }

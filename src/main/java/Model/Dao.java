@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Dao {
     private String user = "root";
     private String url = "jdbc:mysql://localhost:3306/indicaCursos?useTimezone=true&serverTimezone=UTC";
-    private String password = "1234";
+    private String password = "";
     private String Driver = "com.mysql.cj.jdbc.Driver";
 
     //Método de Conexão
