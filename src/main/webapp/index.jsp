@@ -16,7 +16,7 @@
                     <a href="https://www.tiktok.com"><img src="resources/imgs/tiktok.png" alt="tiktok"></a>
                 </div>
 
-                <div class="login-register">
+                <div class="login-register-logout">
                     <a href="login" id="sing">Login</a>
                     <a href="register" id="sing">Register</a>
                 </div>

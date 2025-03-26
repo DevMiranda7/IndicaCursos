@@ -10,14 +10,17 @@
     <main class="mainLogin">
         <div class="EmailESenha">
             <div class="campos">
-                <div class="titulo"><h1>Login</h1></div>
+                <div class="titulo">
+                <h1>Logando em Indica Cursos</h1>
+                <img src="resources/imgs/login-da-conta-movel.png" alt="login" id="pranchetaIMG">
+                </div>
                     <form action="login" method="post" class="loginForm">
                          <table>
-                              <tr>
+                              <tr class="trTable">
                                   <td><input type="text" name="Email" id="email" placeholder="Email" required></td>
                              </tr>
 
-                             <tr>
+                             <tr class="trTable">
                                   <td><input type="text" name="Senha" id="senha" placeholder="Senha" required></td>
                               </tr>
                          </table>

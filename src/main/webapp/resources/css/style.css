@@ -34,10 +34,14 @@ body{
 
 }
 
-.login-register{
+.login-register-logout{
     display: flex;
     gap: 20px;
-
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 13px;
+    align-items:center;
 }
 
 
@@ -115,7 +119,7 @@ a{
     justify-content: space-between;
     text-align: center;
     gap: 80px;
-
+     /*Fonte*/
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -149,7 +153,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    /*Fonte*/
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -157,24 +161,31 @@ a{
 
 
 .mainLogin, .mainRegister{
-    background-color: rgb(255, 255, 255);
-    height: 75%;
+    background-color: #222831;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
+
 .EmailESenha{
-    background-color: rgb(94, 149, 197);
-    height: 65%;
-    width: 25%;
+    background-color: #7F8487;
+    height: 75%;
+    width: 30%;
 
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     border: none;
+    border-radius: 10px;
+   /*Fonte*/
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 }
 
@@ -194,6 +205,8 @@ a{
 
 #email, #senha,#nome{
     height: 35px;
+    display: flex;
+
     width: 250px;
     border-radius: 10px;
     border: none;
@@ -205,14 +218,30 @@ a{
     width: 245px;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 
 }
 
 
 .tabela2, .tabela3{
-    background-color: rgb(156, 156, 156);
+    background-color: #F7F7F7;
     width: 90%;
     height: 100%;
     border-radius: 10px;
 }
 
+.trTable{
+    height: 50px;
+    display: flex;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 40px;
+}
+
+#pranchetaIMG{
+}
