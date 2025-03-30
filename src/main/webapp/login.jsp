@@ -25,11 +25,11 @@
                               </tr>
                          </table>
                         <input type="submit" value="Logar" id="botaoLogin">
-                                <a href="">Esqueceu a senha?</a>
+                                <a href="RecuperarSenha.jsp">Esqueceu a senha?</a>
 
                         <table class="tabela2">
                             <tr><th>Crie sua conta</th></tr>
-                            <tr><td><a href="registro.html">Cadastre-se</a></td></tr>
+                            <tr><td><a href="registro.jsp">Cadastre-se</a></td></tr>
                         </table>
                     </form>
             </div>

@@ -31,27 +31,27 @@
             <section class="cursos">
                     <div class="containnerCursos">
                        <div class="TemaLinks">
-                            <p>Matemática</p>
+                            <p class="temasCursos">Matemática</p>
                             <a href=""><img src="resources/imgs/matematica.png" alt="Matemática"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Programação</p>
+                            <p class="temasCursos">Programação</p>
                             <a href=""><img src="resources/imgs/java.png" alt="Programação"></a>
                         </div>
                         <div class="TemaLinks">
-                            <p>Investimentos</p>
+                            <p class="temasCursos">Investimentos</p>
                             <a href=""><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Designer</p>
+                            <p class="temasCursos">Designer</p>
                             <a href=""><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
                         </div>
                         <div class="TemaLinks">
-                            <p>Inglês</p>
+                            <p class="temasCursos">Inglês</p>
                             <a href=""><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Marketing</p>
+                            <p class="temasCursos">Marketing</p>
                             <a href=""><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
                         </div>
                     </div>

@@ -1,6 +1,5 @@
 package Model;
 
-import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -119,6 +118,33 @@ public class Dao {
 
 
     }
+
+
+    public String verificarSeExiste(String email){
+        String recoverSQL = "select from aluno where email = ?";
+        try {
+            Connection conn = conexao();
+            PreparedStatement queryRecover = conn.prepareStatement(recoverSQL);
+            queryRecover.setString(1,email);
+            ResultSet rs = queryRecover.executeQuery();
+            if(rs.next()){
+                String emailBD = rs.getString("email");
+                return emailBD;
+            }
+
+
+        }catch (SQLException ex){
+            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
+        }
+        return null;
+    }
+
+//    public String mudarSenha(String){
+//
+//    }
+
+
+
 
     /*Atualizar*/
     /*Busca especifica*/

@@ -129,6 +129,8 @@ a{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    justify-content:center;
+    align-items:center;
 }
 
 
@@ -243,5 +245,13 @@ a{
     gap: 40px;
 }
 
-#pranchetaIMG{
+.temasCursos{
+    height: 21px;
+    width:85.63px;
 }
+
+
+
+
+
+

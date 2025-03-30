@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <title>Cursos</title>
     </head>
     <body>
@@ -31,31 +32,32 @@
             <section class="cursos">
                     <div class="containnerCursos">
                        <div class="TemaLinks">
-                            <p>Matemática</p>
-                            <a href=""><img src="resources/imgs/matematica.png" alt="Matemática"></a>
+                            <p class="temasCursos">Matemática</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/matematica.png" alt="Matemática"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Programação</p>
-                            <a href=""><img src="resources/imgs/java.png" alt="Programação"></a>
+                            <p class="temasCursos">Programação</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/java.png" alt="Programação"></a>
                         </div>
                         <div class="TemaLinks">
-                            <p>Investimentos</p>
-                            <a href=""><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
+                            <p class="temasCursos">Investimentos</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Designer</p>
-                            <a href=""><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
+                            <p class="temasCursos">Designer</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/designer-grafico.png" alt="designer-grafico" ></a>
                         </div>
                         <div class="TemaLinks">
-                            <p>Inglês</p>
-                            <a href=""><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
+                            <p class="temasCursos">Inglês</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
                        </div>
                        <div class="TemaLinks">
-                            <p>Marketing</p>
-                            <a href=""><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
+                            <p class="temasCursos">Marketing</p>
+                            <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
                         </div>
                     </div>
             </section>
+
             <div class="subTitulo" id="acheSeuCurso"><p>Ache seu curso</p></div>
             <section class="cursos-especificos">
                 <div>
@@ -152,6 +154,24 @@
             <section class="visao-missao">
                 <p id="missao-visao">Essa iniciativa é 100% gratuita, queremos proporcionar qualidade e educação a todos!</p>
             </section>
+
+            <%-- Pop-Ups --%>
+            <script>
+                 document.querySelectorAll('.CursosPopUp').forEach(function(element) {
+                     element.addEventListener('click', function(event) {
+                         event.preventDefault(); // Impede a ação padrão do link
+
+                         Swal.fire({
+                             title: 'Atenção!',
+                             text: 'Você precisa fazer login para acessar esta área.',
+                             icon: 'warning',
+                             confirmButtonText: 'Entendi',
+                             backdrop: false,  // Configura o SweetAlert para não afetar o layout
+                         });
+                     });
+                 });
+
+            </script>
         </div>
 </body>
 </html>
