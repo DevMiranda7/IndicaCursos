@@ -119,29 +119,46 @@ public class Dao {
 
     }
 
-
-    public String verificarSeExiste(String email){
-        String recoverSQL = "select from aluno where email = ?";
+// Verificando se existe email
+    public boolean verificarSeExiste(String email){
+        String findEmailSQL = "select email from aluno where email = ?";
         try {
             Connection conn = conexao();
-            PreparedStatement queryRecover = conn.prepareStatement(recoverSQL);
+            PreparedStatement queryRecover = conn.prepareStatement(findEmailSQL);
             queryRecover.setString(1,email);
             ResultSet rs = queryRecover.executeQuery();
-            if(rs.next()){
-                String emailBD = rs.getString("email");
-                return emailBD;
-            }
+                return rs.next();
 
 
         }catch (SQLException ex){
             System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
         }
-        return null;
+        return false;
     }
 
-//    public String mudarSenha(String){
-//
-//    }
+    //Restaurar senha
+    public void RestaurarSenha(Aluno aluno){
+        String recoverSQL = "update aluno set senha = ?  where email = ?";
+
+        SenhaUtil senhaUtil = new SenhaUtil();
+
+        //Criptografando
+        String senhaCriptografada = senhaUtil.senhaCriptografar(aluno.getSenha());
+
+        try {
+            Connection conn = conexao();
+            PreparedStatement queryRecover = conn.prepareStatement(recoverSQL);
+            queryRecover.setString(1,senhaCriptografada);
+            queryRecover.setString(2,aluno.getEmail());
+            queryRecover.executeUpdate();
+            conn.close();
+
+
+        }catch (SQLException ex){
+            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
+        }
+    }
+
 
 
 

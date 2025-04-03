@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Aluno;
 import Model.Dao;
 
 import javax.servlet.RequestDispatcher;
@@ -13,7 +14,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/recoverPassword")
 public class RecuperarSenhaServlet extends HttpServlet {
     Dao banco = new Dao();
-
+    Aluno aluno = new Aluno();
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
         String action = request.getServletPath();
         System.out.println("Entrando em: "+action);
@@ -24,7 +25,7 @@ public class RecuperarSenhaServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException, ServletException{
         String action = request.getServletPath();
         System.out.println("Entrando em: "+action);
-        RestaurarSenha(request,response);
+        ConfirmarSeExiste(request,response);
     }
 
 
@@ -34,15 +35,24 @@ public class RecuperarSenhaServlet extends HttpServlet {
     }
 
     // Reavaliar método
-    public void RestaurarSenha(HttpServletRequest request, HttpServletResponse response) throws  IOException, ServletException{
+    public void ConfirmarSeExiste(HttpServletRequest request, HttpServletResponse response) throws  IOException, ServletException{
         String email = request.getParameter("Email");
-        String emailExists  = banco.verificarSeExiste(email);
+        String senha = request.getParameter("Senha");
 
-        if(emailExists  == null){
-            response.sendRedirect("RecuperarSenha.jsp?erro=true");
+        if (email == null || senha == null || email.trim().isEmpty() || senha.trim().isEmpty()){
+            response.sendRedirect("RecuperarSenha.jsp?erro");
+            return;
         }
-        else{
 
+        if(!banco.verificarSeExiste(email)){
+            response.sendRedirect("RecuperarSenha.jsp?Email_nao_encontrado");
+            return;
         }
+
+        aluno.setEmail(email);
+        aluno.setSenha(senha);
+        banco.RestaurarSenha(aluno);
+        response.sendRedirect("login.jsp?SenhaAlterada");
+
     }
 }
