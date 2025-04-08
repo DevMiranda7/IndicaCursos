@@ -136,6 +136,24 @@ public class Dao {
         return false;
     }
 
+    // Verificando se existe senha
+//    public boolean verificarSeExisteSenha(String senha){
+//        String findEmailSQL = "select senha from aluno where senha = ?";
+//        try {
+//            Connection conn = conexao();
+//            PreparedStatement queryRecover = conn.prepareStatement(findEmailSQL);
+//            queryRecover.setString(1,email);
+//            ResultSet rs = queryRecover.executeQuery();
+//            return rs.next();
+//
+//
+//        }catch (SQLException ex){
+//            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
+//        }
+//        return false;
+//    }
+//
+
     //Restaurar senha
     public void RestaurarSenha(Aluno aluno){
         String recoverSQL = "update aluno set senha = ?  where email = ?";

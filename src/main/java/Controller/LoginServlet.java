@@ -37,12 +37,17 @@ public class LoginServlet extends HttpServlet {
     protected void LoginAluno(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 
         String email = request.getParameter("Email");
+        if (!banco.verificarSeExiste(email)) {
+            response.sendRedirect("login.jsp?Email_Nao_Encontrado");
+            return;
+        }
         String senha = request.getParameter("Senha");
         String nome = banco.login(email,senha);
 
-        if(nome == null){
+        if(nome == null ){
             response.sendRedirect("Login.jsp?erro=true");
-        }else {
+        }
+        else {
             HttpSession session = request.getSession();
             session.setAttribute("usuario",email);
             session.setAttribute("nomeDoUsuario",nome);

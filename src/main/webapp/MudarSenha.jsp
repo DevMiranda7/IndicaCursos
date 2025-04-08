@@ -11,10 +11,10 @@
         <div class="containner">
             <p id="titulo">Recuperar acesso</p>
             <img src="resources/imgs/recuperacao-de-conta.png" alt="monitor">
-            <form action="recoverPassword" method="post" class="forms">
+            <form action="updatePassword" method="post" class="forms">
                 <div class="labelEmailSenha">
-                    <label for="email" class="labelInputEmailSenha">Email</label>
-                    <input type="email" id="email" name="Email" required placeholder="Ex: mariafernanda@endereço.com">
+                    <label for="senha" class="labelInputEmailSenha">Senha</label>
+                    <input type="password" id="senha" name="Senha" required placeholder="Nova senha">
                 </div>
                 <button type="submit" id="enviar">Enviar</button>
             </form>
