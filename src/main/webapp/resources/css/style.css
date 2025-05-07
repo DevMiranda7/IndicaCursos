@@ -44,8 +44,6 @@ body{
     align-items:center;
 }
 
-
-
 #sing {
     display: flex;
     border: solid 2px;
@@ -133,6 +131,10 @@ a{
     align-items:center;
 }
 
+.TemaLinks:hover{
+    transform: scale(1.05);
+}
+
 
 .cursos-especificos{
     display: flex;
@@ -145,8 +147,12 @@ a{
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
-
 }
+
+.cursosEspecificos:hover{
+    transform: scale(1.04);
+}
+
 
 .visao-missao{
     background-color: #7FA1C3;
@@ -251,6 +257,83 @@ a{
 }
 
 
+/* Curso */
+.programacao{
+     height: 100vh;
+     background-color: #F7F7F7;
+ }
+
+
+
+.NormalCursos{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    gap: 20px;
+    padding:20px
+
+}
+.cursosGeraisDeTech{
+    display:flex;
+    justify-content:center;
+    border-radius:10px;
+    border: 1px solid;
+    padding: 35px;
+    width:80%;
+    max-width:800px;
+    height:25%;
+    flex-direction:column;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.cursosGeraisDeTech:hover{
+    transform: scale(1.02);
+}
+.cursoName {
+   font-family: "Chakra Petch", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.cursoDescricao {
+   font-family: "Chakra Petch", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+}
+.cursoAvaliacao{
+   font-family: "Chakra Petch", sans-serif;
+   font-weight: 300;
+   font-style: normal;
+}
+
+
+.cursoLink{
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.cursoLink a{
+    text-decoration: none;
+    background-color: #27ae60;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+
+}
+
+.cursoLink a:hover {
+    background-color: #219150;
+}
+
+
+
+
+.cursoAvaliacao{
+}
 
 
 

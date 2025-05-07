@@ -4,16 +4,14 @@ public class Cursos {
 
     private String idCurso;
     private String nomeDoCurso;
-    private String duracaoDoCurso;
-    private String avaliacaoDoCurso;
-    private String tipoDeCurso;
+    private Double avaliacaoDoCurso;
+    private String descricaoCurso;
     private String urlDoCurso;
 
-    public Cursos(String nomeDoCurso, String duracaoDoCurso, String avaliacaoDoCurso, String tipoDeCurso, String urlDoCurso){
+    public Cursos(String nomeDoCurso, Double avaliacaoDoCurso, String urlDoCurso,String descricaoCurso){
         this.nomeDoCurso = nomeDoCurso;
-        this.duracaoDoCurso = duracaoDoCurso;
+        this.descricaoCurso = descricaoCurso;
         this.avaliacaoDoCurso = avaliacaoDoCurso;
-        this.tipoDeCurso = tipoDeCurso;
         this.urlDoCurso = urlDoCurso;
     }
 
@@ -40,33 +38,31 @@ public class Cursos {
         this.nomeDoCurso = nomeDoCurso;
     }
 
-    public String getDuracaoDoCurso(){
-        return duracaoDoCurso;
-    }
-
-    public void setDuracaoDoCurso(String duracaoDoCurso){
-        this.duracaoDoCurso = duracaoDoCurso;
-    }
-
-    public String getAvaliacaoDoCurso(){
+    public Double getAvaliacaoDoCurso(){
         return avaliacaoDoCurso;
     }
 
-    public void setAvaliacaoDoCurso(String avaliacaoDoCurso){
+    public void setAvaliacaoDoCurso(Double avaliacaoDoCurso){
         this.avaliacaoDoCurso = avaliacaoDoCurso;
-    }
-
-    public String getTipoDeCurso(){
-        return tipoDeCurso;
-    }
-
-    public void setTipoDeCurso(String tipoDeCurso){
-        this.tipoDeCurso = tipoDeCurso;
     }
 
     public void setUrlDoCurso(String urlDoCurso){
         this.urlDoCurso = urlDoCurso;
     }
+
+    public String getUrlDoCurso(){
+        return urlDoCurso;
+    }
+
+    public void setDescricaoCurso(String descricaoCurso){
+        this.descricaoCurso = descricaoCurso;
+    }
+
+    public String getDescricaoCurso(){
+        return descricaoCurso;
+    }
+
+
 
 
 

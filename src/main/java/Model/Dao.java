@@ -88,38 +88,32 @@ public class Dao {
 
 
 
-    public ArrayList<Aluno> select(){
-        ArrayList<Aluno> alunos = new ArrayList<>();
+    public ArrayList<Cursos> select() {
+        ArrayList<Cursos> cursos = new ArrayList<>();
 
-        String selectSQL = "select Id_aluno, nome from aluno order by nome";
+        String selectSQL = "SELECT * FROM curso ORDER BY nomeDoCurso";
 
-        try{
-            Connection conn = conexao();
-
-            PreparedStatement querySql = conn.prepareStatement(selectSQL);
-
+        try (Connection conn = conexao(); PreparedStatement querySql = conn.prepareStatement(selectSQL);) {
             ResultSet rd = querySql.executeQuery();
 
-            while (rd.next()){
-                String idAluno = rd.getString(1);
-                String nome = rd.getString(2);
-
-                alunos.add(new Aluno(idAluno,nome));
-
-
-
+            while (rd.next()) {
+                String nomeCurso = rd.getString("nomeDoCurso");
+                String urlCurso = rd.getString("urlCurso");
+                String descricao = rd.getString("descricao");
+                Double avaliacao = rd.getDouble("avaliacao");
+                cursos.add(new Cursos(nomeCurso, avaliacao, urlCurso, descricao));
             }
-            return alunos;
-        }catch (SQLException ex){
-            System.out.println("Erro ao executar o select: "+ex.getMessage());
-
-            return null;
+        } catch (SQLException ex) {
+            System.out.println("Erro ao executar o select: " + ex.getMessage());
+            // Ao invés de retornar null, retornamos uma lista vazia
+            return new ArrayList<>();
         }
 
-
+        return cursos;
     }
 
-// Verificando se existe email
+
+    // Verificando se existe email
     public boolean verificarSeExiste(String email){
         String findEmailSQL = "select email from aluno where email = ?";
         try {
@@ -136,23 +130,7 @@ public class Dao {
         return false;
     }
 
-    // Verificando se existe senha
-//    public boolean verificarSeExisteSenha(String senha){
-//        String findEmailSQL = "select senha from aluno where senha = ?";
-//        try {
-//            Connection conn = conexao();
-//            PreparedStatement queryRecover = conn.prepareStatement(findEmailSQL);
-//            queryRecover.setString(1,email);
-//            ResultSet rs = queryRecover.executeQuery();
-//            return rs.next();
-//
-//
-//        }catch (SQLException ex){
-//            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
-//        }
-//        return false;
-//    }
-//
+
 
     //Restaurar senha
     public void RestaurarSenha(Aluno aluno){
