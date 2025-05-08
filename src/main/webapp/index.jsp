@@ -11,10 +11,10 @@
         <div class="bodyFull">
             <nav class="navegacao">
                 <div class="redes-sociais">
-                    <a href="https://www.youtube.com/"><img src="resources/imgs/youtube.png" alt="Youtube"></a>
-                    <a href="https://www.linkedin.com/notifications/?filter=all"><img src="resources/imgs/linkedin.png" alt="Linkedin"></a>
-                    <a href="https://www.instagram.com/miranda.of7/"><img src="resources/imgs/instagram.png" alt="instagram"></a>
-                    <a href="https://www.tiktok.com"><img src="resources/imgs/tiktok.png" alt="tiktok"></a>
+                    <a href="https://www.youtube.com/" target="_blank"><img src="resources/imgs/youtube.png" alt="Youtube"></a>
+                    <a href="https://www.linkedin.com/notifications/?filter=all" target="_blank"><img src="resources/imgs/linkedin.png" alt="Linkedin"></a>
+                    <a href="https://www.instagram.com/miranda.of7/" target="_blank"><img src="resources/imgs/instagram.png" alt="instagram"></a>
+                    <a href="https://www.tiktok.com" target="_blank"><img src="resources/imgs/tiktok.png" alt="tiktok"></a>
                 </div>
 
                 <div class="login-register-logout">
@@ -62,92 +62,30 @@
             <section class="cursos-especificos">
                 <div>
                     <button id="programcaoBotao" class="cursosEspecificos" onclick="">Programação</button>
-                    <Dialog id="modalProgramacao">
-                        <ul>
-                            <li>Introdução à Lógica de Programação</li>
-                            <li>Algoritmos e Estruturas de Dados</li>
-                            <li>Desenvolvimento Web (HTML, CSS, JavaScript)</li>
-                            <li>Front-end com React.js, Vue.js ou Angular</li>
-                            <li>Back-end com Node.js, Python (Django/Flask) ou Java (Spring Boot)</li>
-                            <li>Desenvolvimento Mobile (Flutter, React Native, Kotlin)</li>
-                        </ul>
-                    </Dialog>
                </div>
 
                 <div>
                     <button id="FinancasBotao" class="cursosEspecificos" onclick="">Finanças e Investimentos</button>
-                    <Dialog id="modalFinancas">
-                        <ul>
-                            <li>Educação Financeira para Iniciantes</li>
-                            <li>Investimentos na Bolsa de Valores</li>
-                            <li>Fundamentos de Análise Técnica e Fundamentalista</li>
-                            <li>Criptomoedas e Blockchain</li>
-                            <li>Planejamento Financeiro Pessoal</li>
-                            <li>Contabilidade para Empreendedores</li>
-                        </ul>
-                    </Dialog>
                 </div>
 
                 <div>
                     <button id="NegóciosBotao" class="cursosEspecificos" onclick="">Empreendedorismo e Negócios</button>
-                    <Dialog id="modalNegócios">
-                        <ul>
-                            <li>Como Abrir um Negócio do Zero</li>
-                            <li>Estratégias de Marketing Digital</li>
-                            <li>Gestão de Projetos com Scrum e Kanban</li>
-                            <li>Branding e Identidade Visual</li>
-                            <li>Gestão de Tráfego Pago (Google Ads, Facebook Ads)</li>
-                        </ul>
-                    </Dialog>
                 </div>
 
                 <div>
                     <button id="desenvolvimentoPessoalBotao" class="cursosEspecificos" onclick="">Desenvolvimento Pessoal</button>
-                    <Dialog id="modalDesenvolvimentoPessoal">
-                        <ul>
-                            <li>Técnicas de Produtividade e Gestão do Tempo</li>
-                            <li>Oratória e Comunicação Eficiente</li>
-                            <li>Inteligência Emocional e Resiliência</li>
-                            <li>Mindfulness e Redução do Estresse</li>
-                        </ul>
-                    </Dialog>
                 </div>
 
                 <div>
                     <button id="DesignMultimidiaBotao" class="cursosEspecificos" onclick="">Design e Multimídia</button>
-                    <Dialog id="modalDesignMultimidia">
-                        <ul>
-                            <li>Design Gráfico com Photoshop e Illustrator</li>
-                            <li>Edição de Vídeo com Premiere e After Effects</li>
-                            <li>UX/UI Design para Aplicações e Sites</li>
-                            <li>Motion Design e Animação Digital</li>
-                        </ul>
-                    </Dialog>
                 </div>
 
                 <div>
                     <button id="idiomasBotao" class="cursosEspecificos" onclick="">Idiomas</button>
-                    <Dialog id="modalIdiomas">
-                        <ul>
-                            <li>Inglês para Iniciantes, Intermediário e Avançado</li>
-                            <li>Francês, Alemão e Japonês para Viagens</li>
-                            <li>Espanhol do Básico ao Avançado</li>
-                        </ul>
-                    </Dialog>
                 </div>
 
                 <div>
                     <button id="culinariaBotao" class="cursosEspecificos" onclick="">Culinária</button>
-                    <Dialog id="modalCulinaria">
-                        <ul>
-                            <li>Como Cozinhar Arroz, Feijão e Massas Perfeitas</li>
-                            <li>Técnicas de Fritura, Assado, Grelhado e Cozimento</li>
-                            <li>Cozinha Italiana (Massas, Risotos, Molhos)</li>
-                            <li>Culinária Japonesa (Sushis, Sashimis, Lamen)</li>
-                            <li>Cozinha Árabe (Esfihas, Kibes, Homus, Babaganoush)</li>
-                            <li>Doces e Sobremesas Brasileiras</li>
-                        </ul>
-                    </Dialog>
                 </div>
             </section>
 
@@ -157,7 +95,7 @@
 
             <%-- Pop-Ups --%>
             <script>
-                 document.querySelectorAll('.CursosPopUp').forEach(function(element) {
+                 document.querySelectorAll('.CursosPopUp, .cursosEspecificos').forEach(function(element) {
                      element.addEventListener('click', function(event) {
                          event.preventDefault(); // Impede a ação padrão do link
 
@@ -167,6 +105,11 @@
                              icon: 'warning',
                              confirmButtonText: 'Entendi',
                              backdrop: false,  // Configura o SweetAlert para não afetar o layout
+                              customClass: {
+                                       title: 'fontePersonalizada',
+                                       popup: 'fontePersonalizada',
+                                       confirmButton: 'fontePersonalizada'
+                                     }
                          });
                      });
                  });

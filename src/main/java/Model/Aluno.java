@@ -6,6 +6,7 @@ public class Aluno {
     private String nome;
     private String email;
     private String senha;
+    private String cursosConcluidos;
 
     public Aluno( String nome, String email, String senha){
         this.nome = nome;
@@ -54,4 +55,13 @@ public class Aluno {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public String getCursosConcluidos() {
+        return cursosConcluidos;
+    }
+
+    public void setCursosConcluidos(String cursosConcluidos) {
+        this.cursosConcluidos = cursosConcluidos;
+    }
+
 }

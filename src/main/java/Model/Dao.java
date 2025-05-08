@@ -88,10 +88,10 @@ public class Dao {
 
 
 
-    public ArrayList<Cursos> select() {
+    public ArrayList<Cursos> select(String nomeDaTabela) {
         ArrayList<Cursos> cursos = new ArrayList<>();
 
-        String selectSQL = "SELECT * FROM curso ORDER BY nomeDoCurso";
+        String selectSQL = "SELECT * FROM " +nomeDaTabela+ " ORDER BY nomeDoCurso";
 
         try (Connection conn = conexao(); PreparedStatement querySql = conn.prepareStatement(selectSQL);) {
             ResultSet rd = querySql.executeQuery();

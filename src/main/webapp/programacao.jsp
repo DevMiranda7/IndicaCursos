@@ -12,10 +12,10 @@
 <body class="programacao">
     <nav class="navegacao">
         <div class="redes-sociais">
-            <a href="https://www.youtube.com/"><img src="resources/imgs/youtube.png" alt="Youtube"></a>
-            <a href="https://www.linkedin.com/notifications/?filter=all"><img src="resources/imgs/linkedin.png" alt="Linkedin"></a>
-            <a href="https://www.instagram.com/miranda.of7/"><img src="resources/imgs/instagram.png" alt="instagram"></a>
-            <a href="https://www.tiktok.com"><img src="resources/imgs/tiktok.png" alt="tiktok"></a>
+            <a href="https://www.youtube.com/" target="_blank"><img src="resources/imgs/youtube.png" alt="Youtube"></a>
+            <a href="https://www.linkedin.com/notifications/?filter=all" target="_blank"><img src="resources/imgs/linkedin.png" alt="Linkedin"></a>
+            <a href="https://www.instagram.com/miranda.of7/" target="_blank"><img src="resources/imgs/instagram.png" alt="instagram"></a>
+            <a href="https://www.tiktok.com" target="_blank"><img src="resources/imgs/tiktok.png" alt="tiktok"></a>
         </div>
 
          <div class="login-register-logout">
@@ -35,32 +35,32 @@
             <div class="containnerCursos">
                <div class="TemaLinks">
                     <p class="temasCursos">Mobile</p>
-                    <a href="" class="CursosPopUp"><img src="resources/imgs/matematica.png" alt="Matemática"></a>
+                    <a href="https://www.youtube.com/watch?v=OGoB-Np2kmg&list=PLx4x_zx8csUhKFaIEC-3ODcoHUEqXjG73" target="_blank" class="CursosPopUp"><img src="resources/imgs/tecnologia.png" alt="Android"></a>
                </div>
                <div class="TemaLinks">
                     <p class="temasCursos">Java</p>
-                    <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" class="CursosPopUp"><img src="resources/imgs/java.png" alt="Programação"></a>
+                    <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank" class="CursosPopUp"><img src="resources/imgs/java.png" alt="Java"></a>
                 </div>
                 <div class="TemaLinks">
                     <p class="temasCursos">Spring boot</p>
-                    <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
+                    <a href="https://www.youtube.com/watch?v=nODe5lFcGpg&list=PLNCSWIsR6ADI_wMAx9F-Iu8Hs9HHxj4sb" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-logotipo-da-primavera-32.png" alt="Spring boot"></a>
                </div>
                <div class="TemaLinks">
                     <p class="temasCursos">Front-end</p>
-                    <a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" class="CursosPopUp"><img src="resources/imgs/designer-grafico.png" alt="designer-grafico" ></a>
+                    <a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank" class="CursosPopUp"><img src="resources/imgs/programacao-front-end.png" alt="Front-end" ></a>
                 </div>
                 <div class="TemaLinks">
                     <p class="temasCursos">Python</p>
-                    <a href="https://www.youtube.com/watch?v=F608hzn_ygo" class="CursosPopUp"><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
+                    <a href="https://www.youtube.com/watch?v=F608hzn_ygo" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-python-24.png" alt="Python"></a>
                </div>
                <div class="TemaLinks">
                     <p class="temasCursos">Angular</p>
-                    <a href="login.jsp" class="CursosPopUp"><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
+                    <a href="https://www.youtube.com/watch?v=VumdXFJ4n7o&list=PLNCSWIsR6ADJuQd4x6LVIC4VFMYArdg3M" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-angular-24.png" alt="Angular"></a>
                 </div>
             </div>
     </section>
 
-    <div class="subTitulo"><p>Cursos</p></div>
+    <div class="subTitulo"><p>Cursos Tech</p></div>
 
     <section class="NormalCursos">
         <%
@@ -69,10 +69,11 @@
                 for(Cursos cursosGerais : cursos){
             %>
         <div class="cursosGeraisDeTech">
+
             <p class="cursoName"><strong><%= cursosGerais.getNomeDoCurso() %></strong></p>
             <p class="cursoDescricao"><%= cursosGerais.getDescricaoCurso() %></p>
             <p class="cursoAvaliacao">Avaliação: <%= cursosGerais.getAvaliacaoDoCurso() %></p>
-            <p class="cursoLink"><a href="<%= cursosGerais.getUrlDoCurso() %>">Acesse o curso</a></p>
+            <p class="cursoLink"><a href="<%= cursosGerais.getUrlDoCurso() %>" target="_blank">Acesse o curso</a></p>
         </div>
 
         <%
