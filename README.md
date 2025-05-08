@@ -38,3 +38,4 @@
 -  ✅Recuperação de senha (Esqueci minha senha)
 -  🛠️Registrar cursos concluídos
 -  🛠️Salvar progresso de cursos
+-  🛠️Professor virtual - ChatBot
