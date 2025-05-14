@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
-    <title>Programação</title>
+    <title>Finanças</title>
 </head>
 <body class="cursosIndica">
     <nav class="navegacao">
@@ -29,38 +29,38 @@
         <button onclick="pendente" id="lupaDePesquisa" ><img src="resources/imgs/lupa.png" alt="lupa"></button>
     </div>
 
-    <div class="subTitulo"><p>Top 6 cursos de programação </p></div>
+    <div class="subTitulo"><p>Top 6 cursos de finanças </p></div>
 
     <section class="cursos">
             <div class="containnerCursos">
                <div class="TemaLinks">
-                    <p class="temasCursos">Mobile</p>
-                    <a href="https://www.youtube.com/watch?v=OGoB-Np2kmg&list=PLx4x_zx8csUhKFaIEC-3ODcoHUEqXjG73" target="_blank" class="CursosPopUp"><img src="resources/imgs/tecnologia.png" alt="Android"></a>
+                    <p class="temasCursos">CPA-10</p>
+                    <a href="https://www.youtube.com/playlist?list=PLSkeYJRHX0YkNgaaucf9J7hcuO08P0Xwq" target="_blank" class="CursosPopUp"><img src="resources/imgs/certificado_de_garantia.png" alt="CPA-10"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Java</p>
-                    <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank" class="CursosPopUp"><img src="resources/imgs/java.png" alt="Java"></a>
+                    <p class="temasCursos">CEA</p>
+                    <a href="https://www.youtube.com/playlist?list=PLmO5ARsA96z3iDV8JnpBjinThFm2YWvJY" target="_blank" class="CursosPopUp"><img src="resources/imgs/certificado.png" alt="CEA"></a>
                 </div>
                 <div class="TemaLinks">
-                    <p class="temasCursos">Spring boot</p>
-                    <a href="https://www.youtube.com/watch?v=nODe5lFcGpg&list=PLNCSWIsR6ADI_wMAx9F-Iu8Hs9HHxj4sb" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-logotipo-da-primavera-32.png" alt="Spring boot"></a>
+                    <p class="temasCursos">Finanças</p>
+                    <a href="https://www.youtube.com/playlist?list=PLrnBMAxcC6QhlXvM1hzGTXdgPLme-ls8M" target="_blank" class="CursosPopUp"><img src="resources/imgs/financa.png" alt="Finanças"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Front-end</p>
-                    <a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank" class="CursosPopUp"><img src="resources/imgs/programacao-front-end.png" alt="Front-end" ></a>
+                    <p class="temasCursos">Investimentos</p>
+                    <a href="https://www.youtube.com/playlist?list=PLMl5SicO7iPBJCO6neYAMHzD6A4N2obd8" target="_blank" class="CursosPopUp"><img src="resources/imgs/investindo.png" alt="Investimentos" ></a>
                 </div>
                 <div class="TemaLinks">
-                    <p class="temasCursos">Python</p>
-                    <a href="https://www.youtube.com/watch?v=F608hzn_ygo" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-python-24.png" alt="Python"></a>
+                    <p class="temasCursos">Criptomoedas</p>
+                    <a href="https://www.youtube.com/playlist?list=PLBkmE8K0RM0stkjXnYgesj98sOwNL8iZj" target="_blank" class="CursosPopUp"><img src="resources/imgs/criptomoedas.png" alt="Criptomoedas"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Angular</p>
-                    <a href="https://www.youtube.com/watch?v=VumdXFJ4n7o&list=PLNCSWIsR6ADJuQd4x6LVIC4VFMYArdg3M" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-angular-24.png" alt="Angular"></a>
+                    <p class="temasCursos">Matemática</p>
+                    <a href="https://www.youtube.com/watch?v=dfs7VJotfks&list=PLX-4skTGVrWWTbH72P6u7d_VtgMcxk7dn" target="_blank" class="CursosPopUp"><img src="resources/imgs/taxadejuro.png" alt="Angular"></a>
                 </div>
             </div>
     </section>
 
-    <div class="subTitulo"><p>Cursos Tech</p></div>
+    <div class="subTitulo"><p>Cursos de finanças</p></div>
 
     <section class="NormalCursos">
         <%

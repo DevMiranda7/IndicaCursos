@@ -40,11 +40,11 @@
                         </div>
                         <div class="TemaLinks">
                             <p class="temasCursos">Investimentos</p>
-                            <a href=""><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
+                            <a href="financeiro"><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
                        </div>
                        <div class="TemaLinks">
                             <p class="temasCursos">Designer</p>
-                            <a href=""><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
+                            <a href="designer"><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
                         </div>
                         <div class="TemaLinks">
                             <p class="temasCursos">Inglês</p>

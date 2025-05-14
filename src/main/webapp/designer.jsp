@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="resources/css/style.css">
-    <title>Programação</title>
+    <title>Finanças</title>
 </head>
 <body class="cursosIndica">
     <nav class="navegacao">
@@ -29,38 +29,38 @@
         <button onclick="pendente" id="lupaDePesquisa" ><img src="resources/imgs/lupa.png" alt="lupa"></button>
     </div>
 
-    <div class="subTitulo"><p>Top 6 cursos de programação </p></div>
+    <div class="subTitulo"><p>Top 6 cursos de Designer </p></div>
 
     <section class="cursos">
             <div class="containnerCursos">
                <div class="TemaLinks">
-                    <p class="temasCursos">Mobile</p>
-                    <a href="https://www.youtube.com/watch?v=OGoB-Np2kmg&list=PLx4x_zx8csUhKFaIEC-3ODcoHUEqXjG73" target="_blank" class="CursosPopUp"><img src="resources/imgs/tecnologia.png" alt="Android"></a>
+                    <p class="temasCursos">Canva</p>
+                    <a href="https://www.youtube.com/playlist?list=PLgQ9cLrmRsTH8LvyiXfc1hnxldDMzU2bC" target="_blank" class="CursosPopUp"><img src="resources/imgs/canva.png" alt="Canva"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Java</p>
-                    <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank" class="CursosPopUp"><img src="resources/imgs/java.png" alt="Java"></a>
+                    <p class="temasCursos">Designer com IA</p>
+                    <a href="https://www.youtube.com/watch?v=ffR663Hv10o" target="_blank" class="CursosPopUp"><img src="resources/imgs/IA.png" alt="Designer com IA"></a>
                 </div>
                 <div class="TemaLinks">
-                    <p class="temasCursos">Spring boot</p>
-                    <a href="https://www.youtube.com/watch?v=nODe5lFcGpg&list=PLNCSWIsR6ADI_wMAx9F-Iu8Hs9HHxj4sb" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-logotipo-da-primavera-32.png" alt="Spring boot"></a>
+                    <p class="temasCursos">Web Designer</p>
+                    <a href="https://www.youtube.com/watch?v=_UEdm9GLDkk" target="_blank" class="CursosPopUp"><img src="resources/imgs/webDesig.png" alt="Web Designer"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Front-end</p>
-                    <a href="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" target="_blank" class="CursosPopUp"><img src="resources/imgs/programacao-front-end.png" alt="Front-end" ></a>
+                    <p class="temasCursos">Designer Advanced </p>
+                    <a href="https://www.youtube.com/playlist?list=PLlSoD8PAohqSxr1GardoHDXh0o43bfOXm" target="_blank" class="CursosPopUp"><img src="resources/imgs/deesigner.png" alt="Designer Gráfico avançado" ></a>
                 </div>
                 <div class="TemaLinks">
-                    <p class="temasCursos">Python</p>
-                    <a href="https://www.youtube.com/watch?v=F608hzn_ygo" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-python-24.png" alt="Python"></a>
+                    <p class="temasCursos">Designer completo</p>
+                    <a href="https://www.youtube.com/playlist?list=PLfY4aYg9e-lOWLv47lEDXBSb54JkADMa2" target="_blank" class="CursosPopUp"><img src="resources/imgs/designerCompleto.png" alt="Designer completo"></a>
                </div>
                <div class="TemaLinks">
-                    <p class="temasCursos">Angular</p>
-                    <a href="https://www.youtube.com/watch?v=VumdXFJ4n7o&list=PLNCSWIsR6ADJuQd4x6LVIC4VFMYArdg3M" target="_blank" class="CursosPopUp"><img src="resources/imgs/icons8-angular-24.png" alt="Angular"></a>
+                    <p class="temasCursos">Figma</p>
+                    <a href="https://www.youtube.com/watch?v=-wMGaO283Cw&list=PL2b2uvKR5s-Hx3byi3qZY_HhPPw9U0e6x" target="_blank" class="CursosPopUp"><img src="resources/imgs/figma.png" alt="Figma"></a>
                 </div>
             </div>
     </section>
 
-    <div class="subTitulo"><p>Cursos Tech</p></div>
+    <div class="subTitulo"><p>Cursos de Designer</p></div>
 
     <section class="NormalCursos">
         <%

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="resources/css/style.css">
     <title>Matemática</title>
 </head>
-<body class="programacao">
+<body class="cursosIndica">
     <nav class="navegacao">
         <div class="redes-sociais">
             <a href="https://www.youtube.com/" target="_blank"><img src="resources/imgs/youtube.png" alt="Youtube"></a>

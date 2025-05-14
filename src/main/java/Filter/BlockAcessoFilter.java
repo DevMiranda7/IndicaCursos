@@ -11,7 +11,7 @@ import java.io.IOException;
 import javax.servlet.Filter;
 import java.util.logging.LogRecord;
 
-@WebFilter(urlPatterns = {"/programacao.jsp","/matematica.jsp"})
+@WebFilter(urlPatterns = {"/programacao.jsp","/matematica.jsp","/financeiro.jsp","/designer.jsp"})
 public class BlockAcessoFilter implements Filter {
 
     @Override
