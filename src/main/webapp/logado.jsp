@@ -48,7 +48,7 @@
                         </div>
                         <div class="TemaLinks">
                             <p class="temasCursos">Inglês</p>
-                            <a href=""><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
+                            <a href="idiomas"><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
                        </div>
                        <div class="TemaLinks">
                             <p class="temasCursos">Marketing</p>
