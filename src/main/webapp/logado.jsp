@@ -32,58 +32,51 @@
                     <div class="containnerCursos">
                        <div class="TemaLinks">
                             <p class="temasCursos">Matemática</p>
-                            <a href="matematica"><img src="resources/imgs/matematica.png" alt="Matemática"></a>
+                            <a href="https://www.youtube.com/playlist?list=PLTPg64KdGgYhYpS5nXdFgdqEZDOS5lARB" target="_blank"><img src="resources/imgs/matematica.png" alt="Matemática"></a>
                        </div>
                        <div class="TemaLinks">
                             <p class="temasCursos">Programação</p>
-                            <a href="programacao"><img src="resources/imgs/java.png" alt="Programação"></a>
+                            <a href="https://www.youtube.com/watch?v=sTX0UEplF54&list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpR" target="_blank"><img src="resources/imgs/java.png" alt="Programação"></a>
                         </div>
                         <div class="TemaLinks">
                             <p class="temasCursos">Investimentos</p>
-                            <a href="financeiro"><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
+                            <a href="https://www.youtube.com/playlist?list=PLSkeYJRHX0YkNgaaucf9J7hcuO08P0Xwq" target="_blank"><img src="resources/imgs/lucro-financeiro.png" alt="Investimentos"></a>
                        </div>
                        <div class="TemaLinks">
                             <p class="temasCursos">Designer</p>
-                            <a href="designer"><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
+                            <a href="https://www.youtube.com/playlist?list=PLgQ9cLrmRsTH8LvyiXfc1hnxldDMzU2bC" target="_blank"><img src="resources/imgs/designer-grafico.png" alt="designer-grafico"></a>
                         </div>
                         <div class="TemaLinks">
                             <p class="temasCursos">Inglês</p>
-                            <a href="idiomas"><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
+                            <a href="https://www.youtube.com/watch?v=X5TdMsc4YCg&list=PL41dMNqXopt85RhRgFp_jdoI5Bz7DUG-c" target="_blank"><img src="resources/imgs/aprendizagem-de-idiomas.png" alt="Idioma"></a>
                        </div>
                        <div class="TemaLinks">
                             <p class="temasCursos">Marketing</p>
-                            <a href=""><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
+                            <a href="https://www.youtube.com/watch?v=vqdnQqLgGRo&list=PLHz_AreHm4dmmqFmLT17KMjoaE0Y4LqRv" target="_blank"><img src="resources/imgs/midia-social.png" alt="Marketing"></a>
                         </div>
                     </div>
             </section>
             <div class="subTitulo" id="acheSeuCurso"><p>Ache seu curso</p></div>
             <section class="cursos-especificos">
                 <div>
-                    <button id="programcaoBotao" class="cursosEspecificos" onclick="">Programação</button>
+                    <a href="programacao" id="programcaoBotao" class="cursosEspecificos">Programação</a>
                </div>
-
                 <div>
-                    <button id="FinancasBotao" class="cursosEspecificos" onclick="">Finanças e Investimentos</button>
+                    <a href="matematica" id="NegóciosBotao" class="cursosEspecificos" onclick="">Matemática</a>
+
                 </div>
-
                 <div>
-                    <button id="NegóciosBotao" class="cursosEspecificos" onclick="">Empreendedorismo e Negócios</button>
+                    <a href="financeiro" id="desenvolvimentoPessoalBotao" class="cursosEspecificos" onclick="">Finanças e Investimentos</a>
+
                 </div>
-
                 <div>
-                    <button id="desenvolvimentoPessoalBotao" class="cursosEspecificos" onclick="">Desenvolvimento Pessoal</button>
+                    <a href="designer" id="DesignMultimidiaBotao" class="cursosEspecificos" onclick="">Design e Multimídia</a>
                 </div>
-
                 <div>
-                    <button id="DesignMultimidiaBotao" class="cursosEspecificos" onclick="">Design e Multimídia</button>
+                    <a href="idiomas" id="idiomasBotao" class="cursosEspecificos" onclick="">Idiomas</a>
                 </div>
-
                 <div>
-                    <button id="idiomasBotao" class="cursosEspecificos" onclick="">Idiomas</button>
-                </div>
-
-                <div>
-                    <button id="culinariaBotao" class="cursosEspecificos" onclick="">Culinária</button>
+                    <a href="marketing" id="culinariaBotao" class="cursosEspecificos" onclick="">Marketing</a>
                 </div>
             </section>
 

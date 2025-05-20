@@ -60,34 +60,27 @@
 
             <div class="subTitulo" id="acheSeuCurso"><p>Ache seu curso</p></div>
             <section class="cursos-especificos">
-                <div>
-                    <button id="programcaoBotao" class="cursosEspecificos" onclick="">Programação</button>
-               </div>
+                            <div>
+                                <a href="" id="programcaoBotao" class="cursosEspecificos">Programação</a>
+                           </div>
+                            <div>
+                                <a href="" id="NegóciosBotao" class="cursosEspecificos" onclick="">Matemática</a>
 
-                <div>
-                    <button id="FinancasBotao" class="cursosEspecificos" onclick="">Finanças e Investimentos</button>
-                </div>
+                            </div>
+                            <div>
+                                <a href="" id="desenvolvimentoPessoalBotao" class="cursosEspecificos" onclick="">Finanças e Investimentos</a>
 
-                <div>
-                    <button id="NegóciosBotao" class="cursosEspecificos" onclick="">Empreendedorismo e Negócios</button>
-                </div>
-
-                <div>
-                    <button id="desenvolvimentoPessoalBotao" class="cursosEspecificos" onclick="">Desenvolvimento Pessoal</button>
-                </div>
-
-                <div>
-                    <button id="DesignMultimidiaBotao" class="cursosEspecificos" onclick="">Design e Multimídia</button>
-                </div>
-
-                <div>
-                    <button id="idiomasBotao" class="cursosEspecificos" onclick="">Idiomas</button>
-                </div>
-
-                <div>
-                    <button id="culinariaBotao" class="cursosEspecificos" onclick="">Culinária</button>
-                </div>
-            </section>
+                            </div>
+                            <div>
+                                <a href="" id="DesignMultimidiaBotao" class="cursosEspecificos" onclick="">Design e Multimídia</a>
+                            </div>
+                            <div>
+                                <a href="" id="idiomasBotao" class="cursosEspecificos" onclick="">Idiomas</a>
+                            </div>
+                            <div>
+                                <a href="" id="culinariaBotao" class="cursosEspecificos" onclick="">Marketing</a>
+                            </div>
+                        </section>
 
             <section class="visao-missao">
                 <p id="missao-visao">Essa iniciativa é 100% gratuita, queremos proporcionar qualidade e educação a todos!</p>

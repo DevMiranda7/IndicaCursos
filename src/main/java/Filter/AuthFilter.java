@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/logado.jsp","/programacao","/financeiro","/designer","/idiomas"}) // Protege a página privada
+@WebFilter(urlPatterns = {"/logado.jsp","/programacao","/financeiro","/designer","/idiomas","/marketing"}) // Protege a página privada
 public class AuthFilter implements Filter {
 
     @Override

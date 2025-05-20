@@ -34,6 +34,8 @@ body{
 
 }
 
+
+
 .login-register-logout{
     display: flex;
     gap: 20px;
@@ -131,6 +133,7 @@ a{
     gap: 25px;
     justify-content:center;
     align-items:center;
+    transition: transform 0.2s ease-in-out;
 }
 
 .TemaLinks:hover{
@@ -149,10 +152,18 @@ a{
     font-family: "Chakra Petch", sans-serif;
     font-weight: 400;
     font-style: normal;
+    color: #000000;
+    border-radius: 6px;
+    border: 2px solid;
+    padding: 3px;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
 }
+
 
 .cursosEspecificos:hover{
     transform: scale(1.04);
+
 }
 
 
