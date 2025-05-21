@@ -19,12 +19,31 @@ public class ListarCursosServlet extends HttpServlet {
 
         String caminho = request.getRequestURI();
         String tipoCurso = caminho.substring(caminho.lastIndexOf("/")+1);
-        String tabela = "curso_" + tipoCurso;
-        System.out.println(tabela);
+        String categoria = "";
+        switch (tipoCurso){
+            case "programacao":
+                categoria = "tecnologia";
+                break;
+            case "matematica":
+                categoria = "matematica";
+                break;
+            case "financeiro":
+                categoria = "financeiro";
+                break;
+            case "designer":
+                categoria = "designer";
+                break;
+            case "idiomas":
+                categoria = "idioma";
+                break;
+            case "marketing":
+                categoria = "marketing";
+                break;
+        }
 
         Dao daoCurso = new Dao();
 
-        ArrayList<Cursos> listarCursos = daoCurso.select(tabela);
+        ArrayList<Cursos> listarCursos = daoCurso.select(categoria);
 
 
         request.setAttribute("cursos", listarCursos);

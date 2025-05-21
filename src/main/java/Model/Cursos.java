@@ -15,6 +15,10 @@ public class Cursos {
         this.urlDoCurso = urlDoCurso;
     }
 
+    public Cursos(String cursos){
+        this.nomeDoCurso = cursos;
+    }
+
     public Cursos(){
         super();
     }

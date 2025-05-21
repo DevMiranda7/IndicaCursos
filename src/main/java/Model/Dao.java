@@ -11,18 +11,18 @@ public class Dao {
     private String Driver = "com.mysql.cj.jdbc.Driver";
 
     //Método de Conexão
-    private Connection conexao(){
+    private Connection conexao() {
         Connection conn = null;
 
         try {
             Class.forName(Driver);
 
-            conn = DriverManager.getConnection(url,user,password);
+            conn = DriverManager.getConnection(url, user, password);
 
-        }catch (ClassNotFoundException ex){
-            System.out.println("Erro ao executar o driver: "+ex.getMessage());
-        }catch (SQLException ex){
-            System.out.println("Erro ao realizar login, user, senha ou url divergentes"+ex.getMessage());
+        } catch (ClassNotFoundException ex) {
+            System.out.println("Erro ao executar o driver: " + ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println("Erro ao realizar login, user, senha ou url divergentes" + ex.getMessage());
         }
 
         return conn;
@@ -30,7 +30,7 @@ public class Dao {
 
     // Registro
     //Método para criar um novo aluno
-    public void create(Aluno aluno){
+    public void create(Aluno aluno) {
 
         String insert = "insert into aluno (nome, email, senha) values (?,?,?)";
         //Novo objeto de senha para criptografar
@@ -43,15 +43,15 @@ public class Dao {
 
             PreparedStatement querySql = conn.prepareStatement(insert);
 
-            querySql.setString(1,aluno.getNome());
-            querySql.setString(2,aluno.getEmail());
-            querySql.setString(3,senhaCriptografada);
+            querySql.setString(1, aluno.getNome());
+            querySql.setString(2, aluno.getEmail());
+            querySql.setString(3, senhaCriptografada);
 
             querySql.executeUpdate();
 
             conn.close();
-        }catch (SQLException ex){
-            System.out.println("Erro ao executar o insert: "+ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println("Erro ao executar o insert: " + ex.getMessage());
 
         }
 
@@ -59,41 +59,40 @@ public class Dao {
 
     //Login
 
-    public String login(String email, String senha){
+    public String login(String email, String senha) {
         String selectSQL = "select nome, senha from aluno where email = ?";
 
         try {
             Connection conn = conexao();
 
             PreparedStatement queryLoginSql = conn.prepareStatement(selectSQL);
-            queryLoginSql.setString(1,email);
+            queryLoginSql.setString(1, email);
             ResultSet rs = queryLoginSql.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 String senhaBD = rs.getString("senha");
                 String nomeBD = rs.getString("nome");
                 SenhaUtil senhaUtil = new SenhaUtil();
 
-                if(senhaUtil.verificarSenha(senha,senhaBD)){
+                if (senhaUtil.verificarSenha(senha, senhaBD)) {
                     return nomeBD;
                 }
             }
-        }catch (SQLException ex){
-            System.out.println("Erro ao verificar as credenciais de login: "+ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println("Erro ao verificar as credenciais de login: " + ex.getMessage());
         }
 
         return null;
     }
 
 
-
-
-    public ArrayList<Cursos> select(String nomeDaTabela) {
+    public ArrayList<Cursos> select(String categoria) {
         ArrayList<Cursos> cursos = new ArrayList<>();
 
-        String selectSQL = "SELECT * FROM " +nomeDaTabela+ " ORDER BY nomeDoCurso";
+        String selectSQL = "select * from curso where categoria = ? order by nomeDoCurso";
 
         try (Connection conn = conexao(); PreparedStatement querySql = conn.prepareStatement(selectSQL);) {
+            querySql.setString(1, categoria);
             ResultSet rd = querySql.executeQuery();
 
             while (rd.next()) {
@@ -114,26 +113,25 @@ public class Dao {
 
 
     // Verificando se existe email
-    public boolean verificarSeExiste(String email){
+    public boolean verificarSeExiste(String email) {
         String findEmailSQL = "select email from aluno where email = ?";
         try {
             Connection conn = conexao();
             PreparedStatement queryRecover = conn.prepareStatement(findEmailSQL);
-            queryRecover.setString(1,email);
+            queryRecover.setString(1, email);
             ResultSet rs = queryRecover.executeQuery();
-                return rs.next();
+            return rs.next();
 
 
-        }catch (SQLException ex){
-            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println("Erro ao tentar recuperar senha: " + ex.getMessage());
         }
         return false;
     }
 
 
-
     //Restaurar senha
-    public void RestaurarSenha(Aluno aluno){
+    public void RestaurarSenha(Aluno aluno) {
         String recoverSQL = "update aluno set senha = ?  where email = ?";
 
         SenhaUtil senhaUtil = new SenhaUtil();
@@ -144,24 +142,40 @@ public class Dao {
         try {
             Connection conn = conexao();
             PreparedStatement queryRecover = conn.prepareStatement(recoverSQL);
-            queryRecover.setString(1,senhaCriptografada);
-            queryRecover.setString(2,aluno.getEmail());
+            queryRecover.setString(1, senhaCriptografada);
+            queryRecover.setString(2, aluno.getEmail());
             queryRecover.executeUpdate();
             conn.close();
 
 
-        }catch (SQLException ex){
-            System.out.println("Erro ao tentar recuperar senha: "+ex.getMessage());
+        } catch (SQLException ex) {
+            System.out.println("Erro ao tentar recuperar senha: " + ex.getMessage());
         }
     }
 
 
+    public ArrayList<Cursos> pesquisarCursos(String caractereCurso) {
+        ArrayList<Cursos> arrayListCurso = new ArrayList<>();
 
+        String pesquisaSQL = "SELECT * FROM curso WHERE nomeDoCurso LIKE ?";
 
-
-    /*Atualizar*/
-    /*Busca especifica*/
-    /*Delete*/
-
+        try {
+            Connection conn = conexao();
+            PreparedStatement queryPesquisaSQL = conn.prepareStatement(pesquisaSQL);
+            queryPesquisaSQL.setString(1, "%" + caractereCurso + "%");
+            ResultSet rd = queryPesquisaSQL.executeQuery();
+            while (rd.next()) {
+                String curso = rd.getString("nomeDoCurso");
+                arrayListCurso.add(new Cursos(curso));
+            }
+            conn.close();
+        } catch (SQLException e) {
+            System.out.println("Erro ao realizar a pesquisa: " + e.getMessage());
+        }
+        return arrayListCurso;
+    }
 
 }
+
+
+
