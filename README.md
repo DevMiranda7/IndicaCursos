@@ -36,5 +36,5 @@
 -  ✅Login de usuários
 -  ✅Registro de novos usuários
 -  ✅Recuperação de senha (Esqueci minha senha)
--  🛠️Registrar cursos concluídos
--  🛠️Salvar progresso de cursos
+-  ✅Busca geral por cursos
+
