@@ -23,9 +23,10 @@
             </nav>
 
             <div class="campoDePesquisa">
-                <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar">
-                <button onclick="pendente" id="lupaDePesquisa" ><img src="resources/imgs/lupa.png" alt="lupa"></button>
+                <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar" onkeyup="buscarCursos()" autocomplete="off" oninput="buscarCursosComDebounce()">
+                <div class="resultadoPesquisa"> <ul id="sugestoes" class="sugestoes-lista"></ul> </div>
             </div>
+
             <div class="subTitulo"><p>Top 6 cursos mais avaliados</p></div>
 
             <section class="cursos">
@@ -56,13 +57,14 @@
                         </div>
                     </div>
             </section>
+
             <div class="subTitulo" id="acheSeuCurso"><p>Ache seu curso</p></div>
             <section class="cursos-especificos">
                 <div>
                     <a href="programacao" id="programcaoBotao" class="cursosEspecificos">Programação</a>
                </div>
                 <div>
-                    <a href="matematica" id="NegóciosBotao" class="cursosEspecificos" onclick="">Matemática</a>
+                    <a href="matematica" id="NegóciosBotao" class="cursosEspecificos">Matemática</a>
 
                 </div>
                 <div>
@@ -81,8 +83,11 @@
             </section>
 
             <section class="visao-missao">
-                <p id="missao-visao">Essa iniciativa é 100% gratuita, queremos proporcionar qualidade e educação a todos!</p>
-            </section>
+                            <p id="missao-visao">Essa iniciativa é 100% gratuita, queremos proporcionar qualidade e educação a todos!</p>
+                        </section>
         </div>
+
+      <script src="resources/js/pesquisasCursos.js"></script>
+
 </body>
 </html>

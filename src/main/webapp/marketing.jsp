@@ -25,9 +25,9 @@
     </nav>
 
     <div class="campoDePesquisa">
-        <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar">
-        <button onclick="pendente" id="lupaDePesquisa" ><img src="resources/imgs/lupa.png" alt="lupa"></button>
-    </div>
+                       <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar" onkeyup="buscarCursos()" autocomplete="off" oninput="buscarCursosComDebounce()">
+                       <div class="resultadoPesquisa"> <ul id="sugestoes" class="sugestoes-lista"></ul> </div>
+                   </div>
 
     <div class="subTitulo"><p>Top 6 cursos de Marketing </p></div>
 
@@ -88,5 +88,6 @@
      <section class="visao-missao">
                     <p id="missao-visao">Essa iniciativa é 100% gratuita, queremos proporcionar qualidade e educação a todos!</p>
                 </section>
+                <script src="resources/js/pesquisasCursos.js"></script>
 </body>
 </html>

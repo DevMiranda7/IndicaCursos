@@ -15,8 +15,9 @@ public class Cursos {
         this.urlDoCurso = urlDoCurso;
     }
 
-    public Cursos(String cursos){
+    public Cursos(String cursos,String url){
         this.nomeDoCurso = cursos;
+        this.urlDoCurso = url;
     }
 
     public Cursos(){

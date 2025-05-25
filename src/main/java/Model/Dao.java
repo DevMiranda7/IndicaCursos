@@ -166,7 +166,8 @@ public class Dao {
             ResultSet rd = queryPesquisaSQL.executeQuery();
             while (rd.next()) {
                 String curso = rd.getString("nomeDoCurso");
-                arrayListCurso.add(new Cursos(curso));
+                String url = rd.getString("urlCurso");
+                arrayListCurso.add(new Cursos(curso,url));
             }
             conn.close();
         } catch (SQLException e) {

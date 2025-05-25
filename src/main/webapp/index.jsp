@@ -24,9 +24,9 @@
             </nav>
 
             <div class="campoDePesquisa">
-                <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar">
-                <button onclick="pendente" id="lupaDePesquisa" ><img src="resources/imgs/lupa.png" alt="lupa"></button>
-            </div>
+                            <input type="text" name="pesquisa" placeholder="Pesquisar" id="Pesquisar" onkeyup="buscarCursos()" autocomplete="off" oninput="buscarCursosComDebounce()">
+                            <div class="resultadoPesquisa"> <ul id="sugestoes" class="sugestoes-lista"></ul> </div>
+                        </div>
             <div class="subTitulo"><p>Top 6 cursos mais avaliados</p></div>
 
             <section class="cursos">
@@ -57,7 +57,6 @@
                         </div>
                     </div>
             </section>
-
             <div class="subTitulo" id="acheSeuCurso"><p>Ache seu curso</p></div>
             <section class="cursos-especificos">
                             <div>
