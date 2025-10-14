@@ -35,6 +35,6 @@
 
 -  ✅Login de usuários
 -  ✅Registro de novos usuários
--  ✅Recuperação de senha (Esqueci minha senha)
+-  ✅Recuperação de senha
 -  ✅Busca geral por cursos
 
